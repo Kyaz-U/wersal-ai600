@@ -1,4 +1,4 @@
-from ai_modules.main import run_all_predictions
+from ai_modules.dynamic_model import run_dynamic_predictions
 import os
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
@@ -21,7 +21,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text
 
     if text == "▶️ Signal olish":
-        result = run_all_predictions()
+        result = run_dynamic_predictions()
         await update.message.reply_text(result)
 
     elif text == "ℹ️ Yordam":
