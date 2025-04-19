@@ -33,7 +33,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         await update.message.reply_text("Iltimos, menyudagi tugmalardan birini tanlang.")
 
-if name == 'main':
+if __name__ == '__main__':
     token = os.getenv("BOT_TOKEN")
     app = ApplicationBuilder().token(token).build()
 
