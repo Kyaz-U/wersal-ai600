@@ -56,7 +56,7 @@ async def show_stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         await update.message.reply_text("Bu buyruq faqat admin uchun!")
 
-if name == 'main':
+if name == "main":
     token = os.getenv("BOT_TOKEN")
     app = ApplicationBuilder().token(token).build()
 
